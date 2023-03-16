@@ -1,19 +1,37 @@
 # doorbell_esp32_mqtt_mikrodash_alexa
 
-This repository contains the code for an intelligent doorbell system that uses an ESP32 microcontroller and communicates with IoT devices through the Mikrodash platform and Alexa. The doorbell can be activated through a touch button or a motion sensor, and information is transmitted using the MQTT protocol, making it highly scalable and adaptable to different environments.
-
-In addition to its advanced features, the doorbell is equipped with a security camera that sends a photo of the person who rings the doorbell via Telegram. This makes it a comprehensive security solution for your home.
-
 ## Getting Started
 
-To use this system, you'll need an ESP32 microcontroller and a few other hardware components, which are listed in the documentation. You'll also need to configure Mikrodash and Alexa to communicate with the doorbell.
+This project enables an ESP32-based doorbell to communicate with MikroDash and Amazon Alexa, and send a picture of the person who rang the doorbell to Telegram. The project includes:
 
-The repository includes the firmware source code for the ESP32, as well as the instructions needed to configure Mikrodash and Alexa. You'll also find the code necessary to integrate Telegram functionality into the system.
+- ESP32 CAM
+- Arcade button
+- Ring 16 LEDs WS2812
+- Power supply 5VDC
+- OLED display 128x32 I2C
+- Buzzer 12mm
 
-## Contributing
+## Materials
 
-Feel free to contribute to this project by submitting bug reports, feature requests, or code improvements through GitHub issues and pull requests.
+## Connection
+| Component        | Pin           |
+| ------------- |:-------------:|
+| ESP32 CAM        | N/A |
+| OLED display     | SDA, SCL |
+| Arcade button    | IO2, 3.3VDC |
+| Ring of LEDs     | IO13 |
+| Buzzer           | IO12 |
+| Power supply     | 5VDC, GND |
 
-## License
+## 3D Models
+All 3D models of the project can be found in the `3D_models` folder.
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+## Firmware
+The firmware of the project can be found in the `firmware` folder.
+
+## CNC Models
+All CNC models of the project can be found in the `CNC_models` folder.
+
+## Credits
+- ESP32 CAM code based on [this example](https://github.com/espressif/arduino-esp32/tree/master/libraries/ESP32/examples/Camera/CameraWebServer).
+- MikroDash code based on [this library](https://github.com/MikroDash/doorbell-esp32-mqtt-mikrodash).
